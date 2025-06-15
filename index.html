@@ -32,7 +32,7 @@
     function createNavbar() {
       const nav = createElement('nav', 'bg-white shadow-lg fixed w-full z-10');
       
-      nav.innerHTML = 
+      nav.innerHTML = `
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between h-16">
             <div class="flex items-center">
@@ -62,7 +62,7 @@
             </div>
           </div>
         </div>
-        ${isMenuOpen ? 
+        ${isMenuOpen ? `
           <div class="md:hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <a href="#" onclick="navigateTo('home')" class="block text-gray-700 hover:text-blue-600 px-3 py-2 ${currentPage === 'home' ? 'font-bold' : ''}">
@@ -76,8 +76,8 @@
               </a>
             </div>
           </div>
-         : ''}
-      ;
+         ` : ''}
+      `;
       
       return nav;
     }
@@ -85,7 +85,7 @@
     // Footer Component
     function createFooter() {
       const footer = createElement('footer', 'bg-gray-100 py-6 text-center mt-auto');
-      footer.innerHTML = 
+      footer.innerHTML = `
         <p>
           Contact me: 
           <a href="mailto:zahn.joshua47@gmail.com" class="text-blue-600 hover:underline">
@@ -93,14 +93,14 @@
           </a>
         </p>
         <p class="mt-2 text-sm text-gray-600">Last updated: May 26, 2025</p>
-      ;
+      `;
       return footer;
     }
 
     // Home Page
     function createHomePage() {
       const container = createElement('div');
-      container.innerHTML = 
+      container.innerHTML = `
         <section class="relative h-[70vh] bg-cover bg-center text-white" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1519302959554-a75be0afc82a?w=1600&h=600&fit=crop')">
           <div class="absolute inset-0 flex items-center justify-center">
             <div class="text-center px-4">
@@ -126,14 +126,14 @@
             <img src="https://images.unsplash.com/photo-1557402873-81ee3ebc9edb?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Busy bustling martket on a busy street with traffic in Thailand" class="w-full rounded-md"> 
           </section>
         </main>
-      ;
+      `;
       return container;
     }
 
     // Gameplay Page
     function createGameplayPage() {
       const container = createElement('div');
-      container.innerHTML = 
+      container.innerHTML = `
         <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-24">
           <h1 class="text-3xl font-bold mb-6">Gameplay Concept</h1>
           <p class="mb-4">
@@ -155,19 +155,19 @@
             </a>.
           </p>
           <p class="mb-4">
-            <a href="sample-mission.pdf" target="_blank"  class="text-blue-600 hover:underline">
+            <a href="sample-mission.pdf" target="_blank" class="text-blue-600 hover:underline">
               Download Sample Mission Pack (PDF)
             </a>
           </p>
         </main>
-      ;
+      `;
       return container;
     }
 
     // Colombia Page
     function createColombiaPage() {
       const container = createElement('div');
-      container.innerHTML = 
+      container.innerHTML = `
         <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-24">
           <h1 class="text-3xl font-bold mb-6">Sample Country: Colombia</h1>
           <p class="mb-4">
@@ -182,11 +182,11 @@
             <li>Find a local SIM card.</li>
             <li>Attend a Feria de las Flores cultural event.</li>
             <li class="mb-4">
-  Learn more about this celebration from the 
-  <a href="https://visitarmedellin.com/en/official-program-feria-de-las-flores/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">
-    official Feria de las Flores site
-  </a>.
-</li>
+              Learn more about this celebration from the 
+              <a href="https://visitarmedellin.com/en/official-program-feria-de-las-flores/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">
+                official Feria de las Flores site
+              </a>.
+            </li>
           </ul>
           <h2 class="text-2xl font-semibold mb-4">Multimedia</h2>
           <p class="mb-4">Watch a video to explore Medellín:</p>
@@ -201,7 +201,7 @@
             </button>
           </div>
         </main>
-      ;
+      `;
       return container;
     }
 
