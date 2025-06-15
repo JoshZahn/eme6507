@@ -36,11 +36,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between h-16">
             <div class="flex items-center">
-              <a href="#" onclick="navigateTo('home')" class="flex items-center">
-                <div class="h-10 w-32 bg-blue-600 text-white flex items-center justify-center rounded font-bold">
-                  VTS Logo
-                </div>
-              </a>
+              <span class="text-xl font-bold text-gray-800">VTS</span>
             </div>
             <div class="hidden md:flex items-center space-x-6">
               <a href="#" onclick="navigateTo('home')" class="text-gray-700 hover:text-blue-600 ${currentPage === 'home' ? 'font-bold' : ''}">
@@ -92,7 +88,7 @@
             zahn.joshua47@gmail.com
           </a>
         </p>
-        <p class="mt-2 text-sm text-gray-600">Last updated: May 26, 2025</p>
+        <p class="mt-2 text-sm text-gray-600">Last updated: June 15, 2025</p>
       `;
       return footer;
     }
@@ -101,7 +97,7 @@
     function createHomePage() {
       const container = createElement('div');
       container.innerHTML = `
-        <section class="relative h-[70vh] bg-cover bg-center text-white" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1519302959554-a75be0afc82a?w=1600&h=600&fit=crop')">
+        <section class="relative h-[60vh] bg-cover bg-center text-white" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1519302959554-a75be0afc82a?w=1600&h=600&fit=crop')">
           <div class="absolute inset-0 flex items-center justify-center">
             <div class="text-center px-4">
               <h1 class="text-4xl md:text-5xl font-bold mb-4">
@@ -116,49 +112,84 @@
           </div>
         </section>
         <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <section class="bg-white rounded-lg shadow-md p-6">
-            <h2 class="text-2xl font-semibold mb-4">About the Simulator</h2>
-            <p class="mb-4">
-              Virtual Travel Simulator blends education, game mechanics, and cultural
-              immersion to help you learn languages, navigate real-world scenarios,
-              and adapt quickly and efficiently to any cultural environment.
-            </p>
-            <img src="https://images.unsplash.com/photo-1557402873-81ee3ebc9edb?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Busy bustling martket on a busy street with traffic in Thailand" class="w-full rounded-md"> 
-          </section>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <div class="space-y-8">
+              <section>
+                <h2 class="text-2xl font-semibold mb-4">About the Simulator</h2>
+                <p class="mb-4">
+                  Virtual Travel Simulator blends education, game mechanics, and cultural
+                  immersion to help you learn languages, navigate real-world scenarios,
+                  and adapt quickly and efficiently to any cultural environment.
+                </p>
+              </section>
+              <section>
+                <h2 class="text-xl font-semibold mb-3">How to Use This Site</h2>
+                <p class="mb-2">
+                  Virtual Travel Simulator is an interactive primer for travelers,
+                  volunteers, and relief workers who need quick cultural onboarding.
+                </p>
+                <p class="mb-2">
+                  By the end you will be able to:
+                </p>
+                <ul class="list-disc pl-6 mb-6 space-y-2">
+                  <li><strong>Describe</strong> core gameplay loops that build real-world skills.</li>
+                  <li><strong>Complete</strong> a sample mission in Medellín.</li>
+                  <li><strong>Choose</strong> the most effective media tools for self-study.</li>
+                </ul>
+                <p>
+                  Start with <strong>Gameplay Concept</strong>, then dive into
+                  <strong>Sample Country: Colombia</strong>. Each section tells you
+                  exactly which media to use and why.
+                </p>
+              </section>
+            </div>
+            <div>
+              <img src="https://images.unsplash.com/photo-1557402873-81ee3ebc9edb?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Busy bustling market on a busy street with traffic in Thailand" class="w-full rounded-md sticky top-24"> 
+            </div>
+          </div>
         </main>
       `;
       return container;
     }
 
-    // Gameplay Page
+    // Gameplay Page - Updated with larger image layout
     function createGameplayPage() {
       const container = createElement('div');
       container.innerHTML = `
         <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-24">
           <h1 class="text-3xl font-bold mb-6">Gameplay Concept</h1>
-          <p class="mb-4">
+          <p class="mb-6">
             Embark on daily missions that teach you real-world skills: from language basics
             to cultural etiquette and professional challenges.
           </p>
-          <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=800&h=400&fit=crop" alt="Dozens of people's hands close together with some red paint on them" class="w-full rounded-md mb-6">
-          <ul class="list-disc pl-6 mb-6 space-y-2">
-            <li><strong>Daily Missions:</strong> Find a laundromat, buy a SIM card, save lives.</li>
-            <li><strong>Skill Building:</strong> Language, medical, cultural norms.</li>
-            <li><strong>Open-Ended Freedom:</strong> Choose your adventure.</li>
-            <li><strong>Dynamic World:</strong> Your choices shape the community.</li>
-            <li><strong>Level Progression:</strong> Newcomer to Cultural Ambassador.</li>
-          </ul>
-          <p class="mb-4">
-            Learn more about the kinds of missions from 
-            <a href="https://www.msf.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">
-              Médecins Sans Frontières
-            </a>.
+          
+          <div class="flex flex-col lg:flex-row gap-8 items-start mb-8">
+            <div class="lg:w-1/3">
+              <ul class="list-disc pl-6 mb-6 space-y-2">
+                <li><strong>Daily Missions:</strong> Find a laundromat, buy a SIM card, save lives.</li>
+                <li><strong>Skill Building:</strong> Language, medical, cultural norms.</li>
+                <li><strong>Open-Ended Freedom:</strong> Choose your adventure.</li>
+                <li><strong>Dynamic World:</strong> Your choices shape the community.</li>
+                <li><strong>Level Progression:</strong> Newcomer to Cultural Ambassador.</li>
+              </ul>
+              <p class="mb-4">
+                Learn more about some of the <strong>actual</strong> simulated missions from 
+                <a href="https://www.msf.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">
+                  Médecins Sans Frontières
+                </a>.
+              </p>
+            </div>
+            <div class="lg:w-2/3">
+              <img src="ExampleDashboard.png" alt="A woman ordering a waffle in French with a gameplay dashboard below" class="w-full h-auto">
+            </div>
+          </div>
+        
+          <h3 class="text-xl font-semibold mt-10 mb-2">🔎 Virtual Travel Simulator Walkthrough</h3>
+          <p class="mb-3">
+            Click through the slides below to learn about the ideas behind Virtual Travel Simulator and exactly how it works.  
           </p>
-          <p class="mb-4">
-            <a href="sample-mission.pdf" target="_blank"  class="text-blue-600 hover:underline">
-              Download Sample Mission Pack (PDF)
-            </a>
-          </p>
+          <iframe src="https://1drv.ms/p/c/c51d56c4c59cd5d7/EbeEA9tnqy1Hi-WdbaStbIABM4BsD-GoZciGvze6RCDubg?e=icnGh0" title="Virtual Travel Simulator walkthrough slides" class="w-full h-[480px] rounded-md shadow-md"></iframe>
+
         </main>
       `;
       return container;
@@ -169,36 +200,53 @@
       const container = createElement('div');
       container.innerHTML = `
         <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-24">
-          <h1 class="text-3xl font-bold mb-6">Sample Country: Colombia</h1>
-          <p class="mb-4">
-            Welcome to Medellín, Colombia. As a player, you arrive here for a cultural mission
-            through a global nonprofit. Explore the city, learn basic Spanish greetings,
-            and dive into the local customs.
-          </p>
-          <img src="https://images.unsplash.com/photo-1558489580-faa74691fdc5?w=800&h=400&fit=crop" alt="Street scene with a view of some buildings and the sky in Medellín, Colombia" class="w-full rounded-md mb-6">
-          <h2 class="text-2xl font-semibold mb-4">Sample Activities</h2>
-          <ul class="list-disc pl-6 mb-6 space-y-2">
-            <li>Learn to say "Hola, ¿Cómo estás?" in Spanish.</li>
-            <li>Find a local SIM card.</li>
-            <li>Attend a Feria de las Flores cultural event.</li>
-            <li class="mb-4">
-  Learn more about this celebration from the 
-  <a href="https://visitarmedellin.com/en/official-program-feria-de-las-flores/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">
-    official Feria de las Flores site
-  </a>.
-</li>
-          </ul>
-          <h2 class="text-2xl font-semibold mb-4">Multimedia</h2>
-          <p class="mb-4">Watch a video to explore Medellín:</p>
-          <div class="mb-6">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/V9P_GX8sWkg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-md"></iframe>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-8">
+            <div>
+              <h1 class="text-3xl font-bold mb-6">Sample Country: Colombia</h1>
+              <p class="mb-6">
+                Welcome to Medellín, Colombia. As a player, you arrive here for a cultural mission
+                through a global nonprofit. Explore the city, learn basic Spanish greetings,
+                and dive into the local customs.
+              </p>
+
+              <h2 class="text-2xl font-semibold mb-4">Sample Activities</h2>
+              <ul class="list-disc pl-6 mb-6 space-y-2">
+                <li>Learn to say "Hola, ¿Cómo estás?" in Spanish.</li>
+                <li>Find a local SIM card.</li>
+                <li>Attend a Feria de las Flores cultural event.</li>
+                <li class="mb-4">
+                  Learn more about this celebration from the 
+                  <a href="https://visitarmedellin.com/en/official-program-feria-de-las-flores/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">
+                    official Feria de las Flores site
+                  </a>.
+                </li>
+                <li class="mb-4">
+                  <a href="sample-mission.pdf" target="_blank"  class="text-blue-600 hover:underline">
+                    Download Sample Laundry How-To Guide <em>(PDF, opens in new tab)</em>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <img src="https://images.unsplash.com/photo-1590598016835-83cf3357ebc5?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="View of some buildings in and the sky in the valley of Medellín, Colombia" class="w-full rounded-md sticky top-24">
+            </div>
           </div>
-          <p class="mb-4">Audio greeting in Spanish:</p>
-          <div class="mb-6 p-4 bg-gray-100 rounded-md">
-            <p class="text-sm text-gray-600 mb-2">Sample audio would play here:</p>
-            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" onclick="playAudio()">
-              🔊 Play "Hola, ¿Cómo estás?"
-            </button>
+
+          <h2 class="text-2xl font-semibold mb-4">Multimedia</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <p class="mb-3 font-semibold">🎥 Watch this short 2-minute video to learn about some neighborhoods and the transportation that you'll navigate in the sample mission.</p>
+              <iframe src="https://www.youtube.com/embed/9tC6Ug8ddlM" title="Medellín neighborhood overview video" allowfullscreen class="w-full h-64 rounded-md"></iframe>
+            </div>
+            
+            <div>
+              <p class="mb-4 font-semibold">🎧 Listen first: 90-second guided preview of your three Medellín micro-missions</p>
+              <audio controls class="w-full rounded-md" aria-label="Immersive audio introduction to Virtual Travel Simulator">
+                <source src="audioProject_JoshuaZahn.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
           </div>
         </main>
       `;
@@ -209,10 +257,6 @@
     function toggleMenu() {
       isMenuOpen = !isMenuOpen;
       render();
-    }
-
-    function playAudio() {
-      alert('Audio would play: "Hola, ¿Cómo estás?" (Hello, how are you?)');
     }
 
     // Main render function
